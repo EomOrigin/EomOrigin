@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Draw the profile banner, the research-line cards and the SPOT-DETR GIF.
+"""Draw the profile banner and the research-line cards.
 
     python3 tools/make_assets.py --fonts DIR [--cache DIR --images DIR]
 
---fonts holds NanumGothic-Regular.ttf and NanumGothic-Bold.ttf. The GIF is
-drawn only when --cache (the qual_cache_v2test folder of the SPOT-DETR
-experiments) and --images (AI-TOD-v2 test images) are given.
+--fonts holds NanumGothic-Regular.ttf and NanumGothic-Bold.ttf. The banner's
+satellite scene is drawn only when --cache (the qual_cache_v2test folder of the
+SPOT-DETR experiments) and --images (AI-TOD-v2 test images) are given.
+The demo GIF comes from tools/record_demo.py (headless Chromium on the live demo).
 """
 
 import argparse
@@ -36,7 +37,29 @@ def use_fonts(font_dir):
     plt.rcParams['font.family'] = 'NanumGothic'
 
 
-def banner(theme):
+def detection_scene(cache, images, image_id=1372, size=(660, 360)):
+    """Satellite crop with SPOT-DETR detections coloured by class (for the banner)."""
+    from PIL import Image, ImageDraw
+
+    cache = Path(cache)
+    meta = {m['id']: m for m in json.loads((cache / 'images.json').read_text())}[image_id]
+    thr = json.loads((cache / 'models.json').read_text())['final']['thr']
+    dets = np.load(cache / 'dets' / 'final.npz')
+    img = Image.open(Path(images) / meta['file_name']).convert('RGB')
+    draw = ImageDraw.Draw(img)
+    colors = {3: (235, 104, 52), 5: (57, 135, 229), 2: (27, 175, 122), 0: (232, 123, 164)}
+    sel = (dets['image_id'] == image_id) & (dets['score'] >= thr)
+    for box, label in zip(dets['box'][sel], dets['label'][sel]):
+        draw.rectangle([*box], outline=colors.get(int(label), (240, 240, 240)), width=2)
+    w, h = size
+    top = 150
+    crop = img.crop((0, top, 800, top + round(800 * h / w)))
+    return crop.resize(size, Image.LANCZOS)
+
+
+def banner(theme, scene=None):
+    from PIL import Image
+
     t = THEMES[theme]
     fig = plt.figure(figsize=(8, 1.8), dpi=200)
     fig.patch.set_facecolor(t['bg'])
@@ -44,36 +67,28 @@ def banner(theme):
     ax.set_xlim(0, 800)
     ax.set_ylim(0, 180)
     ax.axis('off')
-
-    # Right side: a stride grid, anchors at cell centers, off-grid atoms on two rows of cars.
-    x0, y0, cell, cols, rows = 452, 22, 34, 10, 4
-    for i in range(cols + 1):
-        ax.plot([x0 + i * cell] * 2, [y0, y0 + rows * cell], color=t['grid'], lw=0.6)
-    for j in range(rows + 1):
-        ax.plot([x0, x0 + cols * cell], [y0 + j * cell] * 2, color=t['grid'], lw=0.6)
-    for i in range(cols):
-        for j in range(rows):
-            ax.plot(x0 + (i + .5) * cell, y0 + (j + .5) * cell, 'o', ms=1.6, color=t['muted'], alpha=.7)
-    rng = np.random.default_rng(7)
-    for row_y, start, n in ((y0 + 1.15 * cell, x0 + 0.45 * cell, 7), (y0 + 2.75 * cell, x0 + 2.3 * cell, 6)):
-        for k in range(n):
-            cx = start + k * 0.93 * cell + rng.normal(0, 2)
-            cy = row_y + rng.normal(0, 2.5)
-            ax.add_patch(FancyBboxPatch((cx - 11, cy - 7), 22, 14, boxstyle='round,pad=0,rounding_size=2',
-                                        fill=False, lw=0.9, ec=t['box']))
-            ax.plot(cx, cy, 'o', ms=4.2, color=t['atom'], mec=t['bg'], mew=0.6)
-
     name = ax.text(40, 112, 'Ki-won Eom', fontsize=27, fontweight='bold', color=t['ink'], va='baseline')
     fig.canvas.draw()
     right = ax.transData.inverted().transform(name.get_window_extent().get_points())[1][0]
     ax.text(right + 12, 112, '엄기원', fontsize=14, color=t['ink2'], va='baseline')
-    ax.text(41, 80, 'Tiny object detection in aerial and SAR imagery', fontsize=11.5, color=t['ink'],
-            va='baseline')
+    ax.text(41, 80, 'Computer vision · Object detection in satellite imagery', fontsize=11.5,
+            color=t['ink'], va='baseline')
     ax.text(41, 58, 'Undergraduate researcher · AIM Lab, Hanbat National University', fontsize=8.6,
             color=t['ink2'], va='baseline')
     ax.add_patch(Rectangle((41, 40), 46, 2.2, color=t['accent'], lw=0))
-    fig.savefig(OUT / f'banner-{theme}.png', facecolor=t['bg'])
+    out = OUT / f'banner-{theme}.png'
+    fig.savefig(out, facecolor=t['bg'])
     plt.close(fig)
+    if scene is None:
+        return
+    base = Image.open(out).convert('RGB')
+    W, H = base.size
+    sw, sh = scene.size
+    x0 = W - sw
+    ramp = np.clip(np.linspace(0, 1, sw) / 0.22, 0, 1) ** 1.4
+    mask = Image.fromarray((np.tile(ramp, (sh, 1)) * 255).astype('uint8'))
+    base.paste(scene, (x0, (H - sh) // 2), mask)
+    base.save(out)
 
 
 LINE = {
@@ -104,7 +119,7 @@ def research_line(theme, lang):
     w, gap, left = 178, 12, 23
     for k, (year, tag, title, outcome) in enumerate(LINE[lang]):
         x = left + k * (w + gap)
-        last = k == len(LINE[lang]) - 1
+        last = False
         ax.add_patch(FancyBboxPatch((x, 48), w, 160, boxstyle='round,pad=0,rounding_size=8',
                                     fc=t['card'], ec=t['accent'] if last else t['edge'], lw=1.4 if last else 0.8))
         ax.plot(x + w / 2, 26, 'o', ms=7 if last else 5.5, color=t['accent'] if last else t['muted'],
@@ -118,61 +133,6 @@ def research_line(theme, lang):
     plt.close(fig)
 
 
-def spot_gif(cache, images, image_id=10430, size=760):
-    from PIL import Image, ImageDraw, ImageFont
-
-    cache = Path(cache)
-    meta = {m['id']: m for m in json.loads((cache / 'images.json').read_text())}[image_id]
-    thr = json.loads((cache / 'models.json').read_text())
-    gt = np.load(cache / 'gt.npz')
-    gsel = gt['image_id'] == image_id
-    gboxes = gt['box'][gsel]
-    base_img = Image.open(Path(images) / meta['file_name']).convert('RGB')
-    scale = size / base_img.width
-    base_img = base_img.resize((size, round(base_img.height * scale)), Image.LANCZOS)
-    bold = ImageFont.truetype(str(FONT_DIR / 'NanumGothic-Bold.ttf'), 21)
-    reg = ImageFont.truetype(str(FONT_DIR / 'NanumGothic-Regular.ttf'), 16)
-    colors = {'tp': (40, 170, 60), 'fp': (40, 90, 230), 'fn': (220, 40, 45)}
-
-    def frame(model, title):
-        dets = np.load(cache / 'dets' / f'{model}.npz')
-        match = np.load(cache / 'match' / f'{model}.npz')
-        sel = (dets['image_id'] == image_id) & (dets['score'] >= thr[model]['thr'])
-        tp = match['det_tp'][sel]
-        boxes = dets['box'][sel]
-        found = match['gt_score'][gsel] >= thr[model]['thr']
-        img = base_img.copy()
-        d = ImageDraw.Draw(img)
-        for b in gboxes[~found]:
-            d.rectangle([*(b * scale)], outline=colors['fn'], width=2)
-        for b, ok in zip(boxes, tp):
-            d.rectangle([*(b * scale)], outline=colors['tp' if ok else 'fp'], width=2)
-        canvas = Image.new('RGB', (size, img.height + 64), (31, 35, 40))
-        canvas.paste(img, (0, 64))
-        c = ImageDraw.Draw(canvas)
-        c.text((18, 12), title, font=bold, fill=(240, 246, 252))
-        stats = f'found {int(found.sum())} of {len(gboxes)}  ·  false alarms {int((~tp).sum())}'
-        c.text((18, 40), stats, font=reg, fill=(200, 208, 216))
-        x = size - 18
-        for key, label in (('fn', 'missed'), ('fp', 'false alarm'), ('tp', 'correct')):
-            w = c.textlength(label, font=reg)
-            x -= w
-            c.text((x, 40), label, font=reg, fill=(200, 208, 216))
-            x -= 20
-            c.rectangle([x, 43, x + 13, 56], outline=colors[key], width=3)
-            x -= 16
-        return canvas
-
-    a = frame('base', 'SMWG-DETR (baseline)')
-    b = frame('final', 'SPOT-DETR (ours)')
-    fades = [Image.blend(a, b, w) for w in (0.25, 0.5, 0.75)]
-    frames = [a, *fades, b, *fades[::-1]]
-    durations = [1700, 90, 90, 90, 2200, 90, 90, 90]
-    pal = [f.quantize(colors=160, method=Image.MEDIANCUT, dither=Image.NONE) for f in frames]
-    pal[0].save(OUT / 'spot-detr.gif', save_all=True, append_images=pal[1:], duration=durations,
-                loop=0, optimize=True, disposal=1)
-
-
 def main():
     global FONT_DIR
     ap = argparse.ArgumentParser()
@@ -183,12 +143,11 @@ def main():
     FONT_DIR = Path(args.fonts)
     use_fonts(FONT_DIR)
     OUT.mkdir(exist_ok=True)
+    scene = detection_scene(args.cache, args.images) if args.cache and args.images else None
     for theme in THEMES:
-        banner(theme)
+        banner(theme, scene)
         for lang in LINE:
             research_line(theme, lang)
-    if args.cache and args.images:
-        spot_gif(args.cache, args.images)
     print('\n'.join(sorted(p.name for p in OUT.iterdir())))
 
 
