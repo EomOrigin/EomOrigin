@@ -31,7 +31,7 @@ I'm open to **research internships**, **graduate programs** and **AI research en
 
 - **[Oct 2026]** Finished the SPOT-DETR manuscript. Submitting soon!
 - **[Oct 2026]** Placed **6th of 138 teams** in the 2026 National Park Satellite Monitoring AI Challenge (coastal debris detection).
-- **[Sep 2026]** Made the **LG Aimers 9th cohort final** (96 of 3,393 participants) and finished 15th there. We were 29th of 1,090 teams in the online round.
+- **[Sep 2026]** Made the **LG Aimers 9th cohort final** (96 of 3,393 participants) and finished 18th of 33 teams there. We were 29th of 1,090 teams in the online round.
 - **[Mar 2026]** YOLO-Dos is out in the Journal of IKEEE.
 - **[2025]** Our ViT deepfake detection paper is out in the Journal of Digital Forensics.
 - **[2024]** Won the **Grand Prize** at the 6th AI SPARK Challenge (wildfire detection from satellite imagery).
@@ -108,7 +108,7 @@ Upload a satellite or aerial image and see SPOT-DETR and the SMWG-DETR baseline 
 | Result | Competition | Year |
 |---|---|:---:|
 | **Grand Prize** | [6th AI SPARK Challenge](https://aifactory.space/task/2723/overview) (Korea R&D Special Zones) · wildfire detection from multispectral satellite imagery | 2024 |
-| **Finalist** (96 of 3,393 participants) · **15th** in the final | **LG Aimers 9th cohort hackathon** · pitch control prediction · [online round](https://dacon.io/competitions/official/236743/overview/description) 29th of 1,090 teams (top 3%) · [final](https://dacon.io/competitions/official/236767/overview/description) | 2026 |
+| **Finalist** (96 of 3,393 participants) · **18th of 33 teams** in the final | **LG Aimers 9th cohort hackathon** · pitch control prediction · [online round](https://dacon.io/competitions/official/236743/overview/description) 29th of 1,090 teams (top 3%) · [final](https://dacon.io/competitions/official/236767/overview/description) | 2026 |
 | **6th / 138** (top 5%) | [2026 National Park Satellite Monitoring AI Challenge](https://aifactory.space/ko/competitions/9307) · Track 4: coastal debris detection and size estimation | 2026 |
 | **16th / 271** (top 6%) | [2025 SW-Centered University Digital Competition](https://dacon.io/competitions/official/236473/overview/description) · AI track | 2025 |
 | **85th / 985** (top 9%) | [3rd Wind Power Generation Forecasting AI Competition](https://dacon.io/competitions/official/236727/overview/description) (BARAM 2026) | 2026 |
