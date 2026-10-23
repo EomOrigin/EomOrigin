@@ -15,7 +15,7 @@
 
 Hi there 👋 I'm Ki-won, an undergrad in Computer Engineering at **Hanbat National University** and an undergraduate researcher in the **AIM Lab** (advised by Prof. Haneol Jang) since Feb 2024.
 
-I work on **computer vision**, mostly **object detection in satellite imagery**: optical, aerial and SAR. I like figuring out why a detector fails on a certain kind of image and then fixing exactly that. So far that has turned into **two first-author journal papers** and a co-first-author manuscript, plus a lot of competition time, most recently as an **LG Aimers finalist (96 of 3,393 participants)**.
+I work on **computer vision**, mostly **object detection in satellite imagery**: optical, aerial and SAR. I like figuring out why a detector fails on a certain kind of image and then fixing exactly that.
 
 I'm open to **research internships**, **graduate programs** and **AI research engineer roles**. Feel free to reach out!
 
