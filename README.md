@@ -98,7 +98,7 @@ Conference papers (add when ready)
 
 Upload a satellite or aerial image and see SPOT-DETR and the SMWG-DETR baseline side by side. Large images are tiled at native resolution, and the score threshold and class filters update the result without rerunning. On this parking scene SPOT-DETR finds 203 vehicles at a 0.5 threshold, the baseline 146.
 
-- **AI-based detection of unpermitted livestock barns** · with K-water, 2026 – ongoing · AI model for a pilot service that finds barns in 25 cm aerial orthophotos and checks them against permit records to flag unpermitted ones. 17,126 training images (34,930 barns); a YOLO11s + YOLO11l ensemble reaches **90.7% precision, 86.0% recall and 82.9 mAP@0.5**
+- **AI-based detection of unpermitted livestock barns** · with K-water, 2026 – ongoing · developing a model that detects barns in aerial imagery
 - **Cloud segmentation in satellite imagery** · team lead, 2025 · thick cloud, thin cloud and shadow masks; **2nd place** in a course Kaggle challenge (0.8555)
 - **Face anti-spoofing** · team lead, 2025 · live vs. spoofed faces at 98.33% accuracy
 - **Face-recognition smart door lock** · team lead, 2024 · Raspberry Pi 4, OpenCV, SQLite, MQTT
