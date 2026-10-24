@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=220&section=header&text=Ki-won%20Eom&fontSize=60&fontColor=ffffff&fontAlignY=36&desc=Computer%20vision%20%C2%B7%20Object%20detection%20in%20satellite%20imagery&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="엄기원 · 컴퓨터 비전 · 위성 영상 객체 탐지">
+<img src="https://capsule-render.vercel.app/api?type=wave&color=0:1f6feb,100:2ea043&height=260&section=header&text=Ki-won%20Eom&fontSize=72&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="Ki-won Eom">
 
 <p align="center">
   <a href="https://github.com/EomOrigin/HBNU-SWUNIV_2026_eomkiwon"><img src="https://img.shields.io/badge/포트폴리오-0969da?style=flat-square&logo=github&logoColor=white" alt="포트폴리오"></a>
