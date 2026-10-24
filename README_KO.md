@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img alt="엄기원 · 컴퓨터 비전 · 위성 영상 객체 탐지" src="assets/banner-light.png" width="100%">
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=220&section=header&text=Ki-won%20Eom&fontSize=60&fontColor=ffffff&fontAlignY=36&desc=Computer%20vision%20%C2%B7%20Object%20detection%20in%20satellite%20imagery&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="엄기원 · 컴퓨터 비전 · 위성 영상 객체 탐지">
 
 <p align="center">
   <a href="https://github.com/EomOrigin/HBNU-SWUNIV_2026_eomkiwon"><img src="https://img.shields.io/badge/포트폴리오-0969da?style=flat-square&logo=github&logoColor=white" alt="포트폴리오"></a>
@@ -26,7 +23,7 @@
   <img src="https://img.shields.io/badge/투고%20준비-1편%20·%20공동%20제1저자-2a78d6?style=flat-square" alt="투고 준비 1편, 공동 제1저자">
 </p>
 
-## 소식
+## 📢 소식
 
 - **[2026.10]** SPOT-DETR 원고를 마무리했습니다. 곧 투고합니다!
 - **[2026.10]** 2026 국립공원 위성 모니터링 AI 챌린지(해안 쓰레기 탐지)에서 **138팀 중 6위**를 했습니다.
@@ -35,7 +32,7 @@
 - **[2025]** ViT 딥페이크 탐지 논문이 디지털포렌식연구에 실렸습니다.
 - **[2024.02]** AIM Lab에 합류했습니다.
 
-## 연구 분야
+## 🔭 연구 분야
 
 - **위성·항공 영상 객체 탐지**: 작고 빽빽한 객체(SPOT-DETR), 스펙클이 심한 SAR 영상(YOLO-Dos)
 - **위성 영상 분석**: 구름 분할, 해안 쓰레기 탐지
@@ -46,7 +43,7 @@
   <img alt="2025 딥페이크 탐지, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-ko-light.png" width="100%">
 </picture>
 
-## 논문
+## 📚 논문
 
 <sup>†</sup> 공동 제1저자
 
@@ -88,7 +85,7 @@
 - 저자. "제목." 학술대회명, 연도.
 -->
 
-## 프로젝트
+## 🚀 프로젝트
 
 **SPOT-DETR 웹 데모** · 캡스톤디자인(졸업작품), 2026
 
@@ -101,7 +98,7 @@
 - **얼굴 위조 판별** · 팀장, 2025 · 실제 얼굴과 위조 얼굴을 정확도 98.33%로 구분
 - **얼굴 인식 스마트 도어락** · 팀장, 2024 · Raspberry Pi 4, OpenCV, SQLite, MQTT
 
-## 수상·대회
+## 🏆 수상·대회
 
 | 결과 | 대회 | 연도 |
 |---|---|:---:|
@@ -112,17 +109,22 @@
 | **28위 / 219팀**(상위 13%) | [SW중심대학 디지털 경진대회](https://dacon.io/competitions/official/236253/overview/description) · SW와 생성 AI의 만남, AI부문 | 2024 |
 | **2위** | [위성 영상 구름 분할 Kaggle 챌린지](https://www.kaggle.com/competitions/clouds-segmentation-2025/overview) · 국립한밭대학교 AI 교과 | 2025 |
 
-## 경력·학력
+## 🎓 경력·학력
 
 - **AIM Lab, 국립한밭대학교** · 학부연구생, 지도교수 장한얼 · 2024.02 – 현재
   - 참여 과제: 국방기술진흥연구소 우주계층 지능통신망 특화연구실 5세부 *퍼즐형 초광역 공간 위성영상 지능형 처리 연구*(경희대학교·국립한밭대학교). SPOT-DETR은 이 과제와 연계한 연구입니다.
 - **국립한밭대학교** · 컴퓨터공학과 학사과정 · 2023.03 – 현재
 
-## 기술
+## ⚡ 기술
 
-**언어** Python · C · Java<br>
-**딥러닝·비전** PyTorch · MMDetection · Ultralytics YOLO · timm · OpenCV · MediaPipe<br>
-**실험 환경** Linux 다중 GPU 서버 · Docker · Git · Weights & Biases
+**언어**<br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C"> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+
+**딥러닝·비전**<br>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/MMDetection-24292f?style=flat-square" alt="MMDetection"> <img src="https://img.shields.io/badge/Ultralytics%20YOLO-111F68?style=flat-square&logo=ultralytics&logoColor=white" alt="Ultralytics YOLO"> <img src="https://img.shields.io/badge/timm-6e7781?style=flat-square" alt="timm"> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"> <img src="https://img.shields.io/badge/MediaPipe-0097A7?style=flat-square&logo=mediapipe&logoColor=white" alt="MediaPipe"> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit--learn">
+
+**실험 환경**<br>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"> <img src="https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black" alt="Weights %26 Biases">
 
 <!--
 생기면 추가: 발표·포스터 / 조교 / 리뷰어 / 공개 코드

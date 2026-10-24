@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img alt="Ki-won Eom · Computer vision · Object detection in satellite imagery" src="assets/banner-light.png" width="100%">
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=220&section=header&text=Ki-won%20Eom&fontSize=60&fontColor=ffffff&fontAlignY=36&desc=Computer%20vision%20%C2%B7%20Object%20detection%20in%20satellite%20imagery&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Ki-won Eom · Computer vision · Object detection in satellite imagery">
 
 <p align="center">
   <a href="https://github.com/EomOrigin/HBNU-SWUNIV_2026_eomkiwon/blob/main/README_EN.md"><img src="https://img.shields.io/badge/Portfolio-0969da?style=flat-square&logo=github&logoColor=white" alt="Portfolio"></a>
@@ -26,7 +23,7 @@ I'm open to **research internships**, **graduate programs** and **AI research en
   <img src="https://img.shields.io/badge/manuscript-1%20·%20co--first%20author-2a78d6?style=flat-square" alt="Manuscript: 1, co-first author">
 </p>
 
-## News
+## 📢 News
 
 - **[Oct 2026]** Finished the SPOT-DETR manuscript. Submitting soon!
 - **[Oct 2026]** Placed **6th of 138 teams** in the 2026 National Park Satellite Monitoring AI Challenge (coastal debris detection).
@@ -35,7 +32,7 @@ I'm open to **research internships**, **graduate programs** and **AI research en
 - **[2025]** Our ViT deepfake detection paper is out in the Journal of Digital Forensics.
 - **[Feb 2024]** Joined the AIM Lab.
 
-## What I work on
+## 🔭 What I work on
 
 - **Object detection in satellite and aerial images**: tiny, densely packed objects (SPOT-DETR) and speckle-heavy SAR scenes (YOLO-Dos)
 - **Satellite image analysis**: cloud segmentation, coastal debris detection
@@ -46,7 +43,7 @@ I'm open to **research internships**, **graduate programs** and **AI research en
   <img alt="2025 deepfake detection, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-en-light.png" width="100%">
 </picture>
 
-## Publications
+## 📚 Publications
 
 <sup>†</sup> equal contribution
 
@@ -88,7 +85,7 @@ Conference papers (add when ready)
 - Authors. "Title." Conference, Year.
 -->
 
-## Projects
+## 🚀 Projects
 
 **SPOT-DETR web demo** · capstone design project, 2026
 
@@ -101,7 +98,7 @@ Upload a satellite or aerial image and see SPOT-DETR and the SMWG-DETR baseline 
 - **Face anti-spoofing** · team lead, 2025 · live vs. spoofed faces at 98.33% accuracy
 - **Face-recognition smart door lock** · team lead, 2024 · Raspberry Pi 4, OpenCV, SQLite, MQTT
 
-## Honors & Competitions
+## 🏆 Honors & Competitions
 
 | Result | Competition | Year |
 |---|---|:---:|
@@ -112,17 +109,22 @@ Upload a satellite or aerial image and see SPOT-DETR and the SMWG-DETR baseline 
 | **28th / 219** (top 13%) | [SW-Centered University Digital Competition](https://dacon.io/competitions/official/236253/overview/description) · SW meets generative AI, AI track | 2024 |
 | **2nd** | [Cloud segmentation Kaggle challenge](https://www.kaggle.com/competitions/clouds-segmentation-2025/overview) · Hanbat National University AI course | 2025 |
 
-## Experience & Education
+## 🎓 Experience & Education
 
 - **AIM Lab, Hanbat National University** · undergraduate researcher, advised by Prof. Haneol Jang · Feb 2024 – present
   - Research project: Space-layer Intelligent Communication Network Specialized Research Lab (KRIT), Sub-project 5: *intelligent processing of puzzle-type ultra-wide-area satellite imagery*, with Kyung Hee University. SPOT-DETR is linked to this project.
 - **Hanbat National University** · B.S. in Computer Engineering · Mar 2023 – present
 
-## Skills
+## ⚡ Skills
 
-**Languages** Python · C · Java<br>
-**DL / CV** PyTorch · MMDetection · Ultralytics YOLO · timm · OpenCV · MediaPipe<br>
-**Infra** Linux multi-GPU servers · Docker · Git · Weights & Biases
+**Languages**<br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C"> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+
+**DL / CV**<br>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/MMDetection-24292f?style=flat-square" alt="MMDetection"> <img src="https://img.shields.io/badge/Ultralytics%20YOLO-111F68?style=flat-square&logo=ultralytics&logoColor=white" alt="Ultralytics YOLO"> <img src="https://img.shields.io/badge/timm-6e7781?style=flat-square" alt="timm"> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"> <img src="https://img.shields.io/badge/MediaPipe-0097A7?style=flat-square&logo=mediapipe&logoColor=white" alt="MediaPipe"> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit--learn">
+
+**Infra**<br>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"> <img src="https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black" alt="Weights %26 Biases">
 
 <!--
 Add when available: Talks & posters / Teaching / Reviewing / Open source
