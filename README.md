@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img alt="Ki-won Eom · Computer vision · Object detection in satellite imagery" src="assets/banner-light.png" width="100%">
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=wave&color=0:1f6feb,100:2ea043&height=260&section=header&text=Ki-won%20Eom&fontSize=72&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="Ki-won Eom">
 
 <p align="center">
   <a href="https://github.com/EomOrigin/HBNU-SWUNIV_2026_eomkiwon/blob/main/README_EN.md"><img src="https://img.shields.io/badge/Portfolio-0969da?style=flat-square&logo=github&logoColor=white" alt="Portfolio"></a>

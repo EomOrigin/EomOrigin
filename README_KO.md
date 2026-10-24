@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img alt="엄기원 · 컴퓨터 비전 · 위성 영상 객체 탐지" src="assets/banner-light.png" width="100%">
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=wave&color=0:1f6feb,100:2ea043&height=260&section=header&text=Ki-won%20Eom&fontSize=72&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="Ki-won Eom">
 
 <p align="center">
   <a href="https://github.com/EomOrigin/HBNU-SWUNIV_2026_eomkiwon"><img src="https://img.shields.io/badge/포트폴리오-0969da?style=flat-square&logo=github&logoColor=white" alt="포트폴리오"></a>
