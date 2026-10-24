@@ -21,7 +21,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/LG%20Aimers%209기-결선%20진출%20·%203,393명%20중%2096명-bf8700?style=flat-square" alt="LG Aimers 9기 결선 진출, 3,393명 중 96명">
-  <img src="https://img.shields.io/badge/AI%20SPARK%20챌린지-대상-bf8700?style=flat-square" alt="AI SPARK 챌린지 대상">
   <img src="https://img.shields.io/badge/국립공원%20위성%20AI%20챌린지-6위%20%2F%20138팀-bf8700?style=flat-square" alt="국립공원 위성 모니터링 AI 챌린지 6위"><br>
   <img src="https://img.shields.io/badge/KCI%20논문-2편%20·%20제1저자-2a78d6?style=flat-square" alt="KCI 논문 2편, 제1저자">
   <img src="https://img.shields.io/badge/투고%20준비-1편%20·%20공동%20제1저자-2a78d6?style=flat-square" alt="투고 준비 1편, 공동 제1저자">
@@ -34,18 +33,17 @@
 - **[2026.09]** **LG Aimers 9기 결선**(3,393명 중 96명)에 올라 결선 33팀 중 18위를 했습니다. 온라인 예선은 1,090팀 중 29위였습니다.
 - **[2026.03]** YOLO-Dos가 전기전자학회논문지에 실렸습니다.
 - **[2025]** ViT 딥페이크 탐지 논문이 디지털포렌식연구에 실렸습니다.
-- **[2024]** 제6회 연구개발특구 AI SPARK 챌린지(위성 영상 산불 탐지)에서 **대상**을 받았습니다.
 - **[2024.02]** AIM Lab에 합류했습니다.
 
 ## 연구 분야
 
 - **위성·항공 영상 객체 탐지**: 작고 빽빽한 객체(SPOT-DETR), 스펙클이 심한 SAR 영상(YOLO-Dos)
-- **위성 영상 분석**: 산불 탐지, 구름 분할, 해안 쓰레기 탐지
+- **위성 영상 분석**: 구름 분할, 해안 쓰레기 탐지
 - **영상 포렌식**: Vision Transformer 기반 딥페이크 탐지
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/research-line-ko-dark.png">
-  <img alt="2024 산불 탐지, 2025 딥페이크 탐지, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-ko-light.png" width="100%">
+  <img alt="2025 딥페이크 탐지, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-ko-light.png" width="100%">
 </picture>
 
 ## 논문
@@ -107,7 +105,6 @@
 
 | 결과 | 대회 | 연도 |
 |---|---|:---:|
-| **대상** | [제6회 연구개발특구 AI SPARK 챌린지](https://aifactory.space/task/2723/overview) · 위성 다분광 영상 기반 산불 탐지 | 2024 |
 | **결선 진출**(3,393명 중 96명) · 결선 **18위 / 33팀** | **LG Aimers 9기 해커톤** · 투구 제구 성공 확률 예측 · [온라인 예선](https://dacon.io/competitions/official/236743/overview/description) 1,090팀 중 29위(상위 3%) · [오프라인 결선](https://dacon.io/competitions/official/236767/overview/description) | 2026 |
 | **6위 / 138팀**(상위 5%) | [2026 국립공원 위성 모니터링 AI 챌린지](https://aifactory.space/ko/competitions/9307) · 주제 4: 해안 쓰레기 탐지 및 규모 추정 | 2026 |
 | **16위 / 271팀**(상위 6%) | [2025 SW중심대학 디지털 경진대회](https://dacon.io/competitions/official/236473/overview/description) · AI부문 | 2025 |

@@ -93,13 +93,11 @@ def banner(theme, scene=None):
 
 LINE = {
     'en': [
-        ('2024', 'SATELLITE · MULTISPECTRAL', 'Wildfire detection', 'Grand Prize, AI SPARK Challenge'),
         ('2025', 'FACE FORENSICS', 'ViT deepfake detection\nwith facial region weights', 'J. Digital Forensics · first author'),
         ('2026', 'SAR', 'YOLO-Dos: speckle\nsuppression for SAR\nship detection', 'J. IKEEE · first author'),
         ('2026', 'AERIAL', 'SPOT-DETR: tiny object\ndetection with off-grid\ncandidates', 'Manuscript · co-first author'),
     ],
     'ko': [
-        ('2024', '위성 · 다분광 영상', '산불 탐지', 'AI SPARK 챌린지 대상'),
         ('2025', '얼굴 위변조 탐지', '눈·코·입 영역 가중치를 쓰는\nViT 딥페이크 탐지', '디지털포렌식연구 · 제1저자'),
         ('2026', 'SAR 영상', 'YOLO-Dos: 스펙클 억제로\nSAR 선박 탐지 개선', '전기전자학회논문지 · 제1저자'),
         ('2026', '항공 영상', 'SPOT-DETR: off-grid 후보로\n극소 객체 탐지', '투고 준비 · 공동 제1저자'),
@@ -116,7 +114,9 @@ def research_line(theme, lang):
     ax.set_ylim(0, 225)
     ax.axis('off')
     ax.plot([60, 740], [26, 26], color=t['edge'], lw=1.2)
-    w, gap, left = 178, 12, 23
+    n = len(LINE[lang])
+    gap, left = 14, 23
+    w = (800 - 2 * left - (n - 1) * gap) / n
     for k, (year, tag, title, outcome) in enumerate(LINE[lang]):
         x = left + k * (w + gap)
         last = False

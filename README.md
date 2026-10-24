@@ -21,7 +21,6 @@ I'm open to **research internships**, **graduate programs** and **AI research en
 
 <p align="center">
   <img src="https://img.shields.io/badge/LG%20Aimers%209th-finalist%20·%2096%20of%203,393-bf8700?style=flat-square" alt="LG Aimers 9th: finalist, 96 of 3,393">
-  <img src="https://img.shields.io/badge/AI%20SPARK%20Challenge-Grand%20Prize-bf8700?style=flat-square" alt="AI SPARK Challenge: Grand Prize">
   <img src="https://img.shields.io/badge/National%20Park%20Satellite%20AI%20Challenge-6th%20of%20138-bf8700?style=flat-square" alt="National Park Satellite AI Challenge: 6th of 138"><br>
   <img src="https://img.shields.io/badge/KCI%20journal%20papers-2%20·%20first%20author-2a78d6?style=flat-square" alt="KCI journal papers: 2, first author">
   <img src="https://img.shields.io/badge/manuscript-1%20·%20co--first%20author-2a78d6?style=flat-square" alt="Manuscript: 1, co-first author">
@@ -34,18 +33,17 @@ I'm open to **research internships**, **graduate programs** and **AI research en
 - **[Sep 2026]** Made the **LG Aimers 9th cohort final** (96 of 3,393 participants) and finished 18th of 33 teams there. We were 29th of 1,090 teams in the online round.
 - **[Mar 2026]** YOLO-Dos is out in the Journal of IKEEE.
 - **[2025]** Our ViT deepfake detection paper is out in the Journal of Digital Forensics.
-- **[2024]** Won the **Grand Prize** at the 6th AI SPARK Challenge (wildfire detection from satellite imagery).
 - **[Feb 2024]** Joined the AIM Lab.
 
 ## What I work on
 
 - **Object detection in satellite and aerial images**: tiny, densely packed objects (SPOT-DETR) and speckle-heavy SAR scenes (YOLO-Dos)
-- **Satellite image analysis**: wildfire detection, cloud segmentation, coastal debris detection
+- **Satellite image analysis**: cloud segmentation, coastal debris detection
 - **Image forensics**: deepfake detection with Vision Transformers
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/research-line-en-dark.png">
-  <img alt="2024 wildfire detection, 2025 deepfake detection, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-en-light.png" width="100%">
+  <img alt="2025 deepfake detection, 2026 YOLO-Dos, 2026 SPOT-DETR" src="assets/research-line-en-light.png" width="100%">
 </picture>
 
 ## Publications
@@ -107,7 +105,6 @@ Upload a satellite or aerial image and see SPOT-DETR and the SMWG-DETR baseline 
 
 | Result | Competition | Year |
 |---|---|:---:|
-| **Grand Prize** | [6th AI SPARK Challenge](https://aifactory.space/task/2723/overview) (Korea R&D Special Zones) · wildfire detection from multispectral satellite imagery | 2024 |
 | **Finalist** (96 of 3,393 participants) · **18th of 33 teams** in the final | **LG Aimers 9th cohort hackathon** · pitch control prediction · [online round](https://dacon.io/competitions/official/236743/overview/description) 29th of 1,090 teams (top 3%) · [final](https://dacon.io/competitions/official/236767/overview/description) | 2026 |
 | **6th / 138** (top 5%) | [2026 National Park Satellite Monitoring AI Challenge](https://aifactory.space/ko/competitions/9307) · Track 4: coastal debris detection and size estimation | 2026 |
 | **16th / 271** (top 6%) | [2025 SW-Centered University Digital Competition](https://dacon.io/competitions/official/236473/overview/description) · AI track | 2025 |
